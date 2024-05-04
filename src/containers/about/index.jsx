@@ -1,11 +1,11 @@
 import React from 'react'
-import { BsInfoCircleFill } from 'react-icons/bs'
+import { AiFillContacts } from 'react-icons/ai'
 import PageHeaderContent from '../../components/pageHeaderContent'
 import { Animate } from 'react-simple-animate'
 import './styles.scss'
 import { DiTerminal, DiCode } from 'react-icons/di'
 import { FaChalkboardTeacher, FaLaughBeam } from 'react-icons/fa'
-import { AiFillContacts } from 'react-icons/ai'
+import Aboutme from "../../images/Aboutme.jpg";
 
 const personalDetails = [
   {
@@ -18,11 +18,11 @@ const personalDetails = [
   },
   {
     label: 'Address :',
-    value: 'Kolkata,West Bengal'
+    value: 'Kolkata, West Bengal'
   },
   {
     label: 'Email :',
-    value: 'juhisaha2001@gmai.com'
+    value: 'juhisaha2001@gmail.com'
   },
   {
     label: 'Contact No. :',
@@ -39,7 +39,7 @@ const personalDetails = [
 ]
 
 const jobSummary =
-'I am a frontend developer, passionate about crafting engaging and user-friendly digital experiences. With a blend of creativity and technical expertise, I specialize in building intuitive interfaces that seamlessly connect users with technology. My goal is to make websites and applications not just functional, but delightful to use. I thrive on the challenges of responsive design, accessibility, and performance optimization to ensure that every user interaction is smooth and impactful.'
+  'I am a frontend developer, passionate about crafting engaging and user-friendly digital experiences. With a blend of creativity and technical expertise, I specialize in building intuitive interfaces that seamlessly connect users with technology. My goal is to make websites and applications not just functional, but delightful to use. I thrive on the challenges of responsive design, accessibility, and performance optimization to ensure that every user interaction is smooth and impactful.'
 
 const About = () => {
   return (
@@ -102,21 +102,7 @@ const About = () => {
             }}
           >
             <div className='about__content__serviceWrapper__innerContent'>
-              <div>
-                <FaChalkboardTeacher
-                  size={60}
-                  color='var(--yellow-theme-main-color)'
-                />
-              </div>
-              <div>
-                <FaLaughBeam size={60} color='var(--yellow-theme-main-color)' />
-              </div>
-              <div>
-                <DiCode size={60} color='var(--yellow-theme-main-color)' />
-              </div>
-              <div>
-                <DiTerminal size={60} color='var(--yellow-theme-main-color)' />
-              </div>
+              <img src={Aboutme} alt='About Me' className='about__content__serviceWrapper__innerContent__image' />
             </div>
           </Animate>
         </div>

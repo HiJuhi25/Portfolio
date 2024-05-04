@@ -6,45 +6,46 @@ import ImageTwo from "../../images/Grocery.jpg";
 import ImageThree from "../../images/Admin.jpg";
 import ImageFour from "../../images/Optimization.jpg";
 import ImageFive from "../../images/Instagram.jpg";
+import ImageSix from "../../images/DigitalClock.jpg";
 import "./styles.scss";
 import { useState } from "react";
 
 const portfolioData = [
   {
-    id: 2,
+    id: 1,
     name: "Disney Clone",
     image: ImageOne,
     link: "https://hotstar-clone-app.netlify.app/",
   },
   {
-    id: 3,
+    id: 2,
     name: "Grocery App",
     image: ImageTwo,
-    link: "",
+    link: "https://grocery-app-dun.vercel.app/",
   },
   {
-    id: 4,
+    id: 3,
     name: "Dashboard",
     image: ImageThree,
-    link: "",
+    link: "https://admin-panel-three-gold.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     name: "IDS",
     image: ImageFour,
     link: "",
   },
   {
-    id: 6,
+    id: 5,
     name: "Instagram Clone",
     image: ImageFive,
     link: "",
   },
   {
-    id: 7,
+    id: 4,
     name: "Digital Clock",
-    image: ImageFive,
-    link: "",
+    image: ImageSix,
+    link: "https://digital-clock.static.domains/project1",
   },
 ];
 
@@ -64,7 +65,7 @@ const filterData = [
 ];
 
 const Portfolio = () => {
-  const [filteredValue, setFilteredValue] = useState(1);
+  const [filteredValue, setFilteredValue] = useState(2); // Initially show "Completed" items
   const [hoveredValue, setHoveredValue] = useState(null);
 
   function handleFilter(currentId) {
@@ -77,8 +78,10 @@ const Portfolio = () => {
 
   const filteredItems =
     filteredValue === 1
-      ? portfolioData
-      : portfolioData.filter((item) => item.id === filteredValue);
+      ? portfolioData // Show all items for "All" filter
+      : filteredValue === 2
+      ? portfolioData.filter((item) => ![5, 6].includes(item.id)) // Show "Completed" items
+      : portfolioData.filter((item) => [5, 6].includes(item.id)); // Show "Ongoing" items
 
   return (
     <section id="portfolio" className="portfolio">

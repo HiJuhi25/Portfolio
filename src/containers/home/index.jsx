@@ -2,7 +2,8 @@ import React from 'react';
 import './styles.scss';
 import { Link } from 'react-router-dom';
 import { Animate } from 'react-simple-animate';
-import pic from './images/pic.png'; // Import the image
+import pic from './images/pic.png'; 
+import { BiLogoGithub , BiLogoLinkedinSquare } from 'react-icons/bi';
 
 const Home = () => {
   return (
@@ -54,6 +55,12 @@ const Home = () => {
           >
             <button>Resume</button>
           </Link>
+        </div>
+        <br/>
+        <br/>
+        <div className='home__contact-icons'>
+        <Link to={'https://github.com/HiJuhi25/'}><BiLogoGithub size={40} style={{ marginLeft: '10px' }} /></Link>
+          <Link to={'https://www.linkedin.com/in/juhi-saha-438288243/'}><BiLogoLinkedinSquare size={40} style={{ marginLeft: '10px' }} /></Link>
         </div>
       </Animate>
     </div>

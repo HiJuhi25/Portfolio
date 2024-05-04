@@ -14,12 +14,12 @@
         height: inherit;
         padding: 0px 20px;
         flex: 1;
-
         &__logo{
             color: var(--yellow-theme-main-color);
             cursor: pointer;
         }
-        &__menu {
+
+        &__menu{
             display: flex;
             list-style: none;
             text-align: center;
@@ -29,7 +29,7 @@
                 margin-right: 1.5rem;
                 font-size: 1.6rem;
 
-                &::after {
+                &::after{
                     content: '';
                     display: block;
                     height: 3px;
@@ -66,25 +66,31 @@
         position: absolute;
         top: 80px;
         left: -110%;
-        opacity: 1;
+        //opacity: 1;
         transition: all 0.5s ease;
+        z-index: 9999;
+        background-color: white;
 
         &.active{
             background: #181818;
             left: 0px;
-            opacity: 1;
+            //opacity: 1;
+            z-index: 9999;
         }
 
         &__item{
-            // border-bottom: 1px solid #282828;
+            border-bottom: 1px solid #282828;
             margin: 0px;
-            padding: 20px 0px;
+            padding: 20px 0px; 
+           
         }
     }
+
     .nav-icon{
         display: block;
         cursor: pointer;
         color: var(--yellow-theme-main-color);
         padding-right: 20px;
+        
     }
 }
