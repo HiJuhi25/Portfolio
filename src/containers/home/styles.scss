@@ -1,6 +1,12 @@
 .home__image-wrapper {
   margin-bottom: 15px; /* Add spacing below the image */
   z-index: 10;
+  transition: transform 0.3s ease; /* Added transition for smooth effect */
+
+  /* Added hover effect */
+  &:hover {
+    transform: scale(1.09); /* Increase size by 9% on hover */
+  }
 }
 
 .home__image {
