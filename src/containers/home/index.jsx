@@ -51,7 +51,7 @@ const Home = () => {
             <button>Contact Me</button>
           </a>
           <Link
-            to='https://drive.google.com/file/d/1TLl3-pvmO7JPwVPqpO_H0rRhTDlwHMK2/view?usp=sharing'
+            to='https://drive.google.com/file/d/1Dw4WClVLgoLOFsYG5N-kr5jEYoSwV2iB/view?usp=sharing'
           >
             <button>Resume</button>
           </Link>

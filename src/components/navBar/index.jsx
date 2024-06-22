@@ -25,10 +25,7 @@ const data = [
         lable: 'PROJECTS',
         to: '/portfolio'
     },
-    // {
-    //     lable: 'CONTACT',
-    //     to: '/contact'
-    // }
+    
 ]
 
 const Navbar = () => {
